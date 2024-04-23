@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Patients</title>
+</head>
+<body>
+    <h1>Liste des Patients</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Âge</th>
+                <th>DateNaissance</th>
+                <!-- Ajoutez d'autres colonnes ici si nécessaire -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for Patient in patients %}
+                <tr>
+                    <td>{{ patients.nom }}</td>
+                    <td>{{ patients.prenom }}</td>
+                    <td>{{ patients.age }}</td>
+                    <td>{{ patients.DateNaissance }}</td>
+                    <!-- Remplacez "age" par le nom du champ correspondant à l'âge dans votre modèle -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
